@@ -5,9 +5,9 @@ error_reporting(E_ALL);
 
 session_start();
 
-$servername = "localhost";
-$username = "root";
-$password = "";
+$servername = "videodb.mysql.database.azure.com";
+$username = "video";
+$password = "Deeku@130404";
 $dbname = "user_db"; // Updated database name
 
 // Create connection

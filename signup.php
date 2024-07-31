@@ -3,10 +3,10 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "user_db";
+$servername = "videodb.mysql.database.azure.com";
+$username = "video";
+$password = "Deeku@130404";
+$dbname = "user_db"; // Updated database name
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
