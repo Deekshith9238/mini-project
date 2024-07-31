@@ -22,7 +22,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Check if email already exists
     $checkEmailStmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
-    $checkEmailStmt->bind_param("ss", $email);
+    if ($checkEmailStmt === false) {
+        die("Prepare failed: " . $conn->error);
+    }
+    $checkEmailStmt->bind_param("s", $email);
     $checkEmailStmt->execute();
     $result = $checkEmailStmt->get_result();
     
@@ -30,6 +33,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Email already exists. Please use a different email.";
     } else {
         $stmt = $conn->prepare("INSERT INTO users (email, password) VALUES (?, ?)");
+        if ($stmt === false) {
+            die("Prepare failed: " . $conn->error);
+        }
         $stmt->bind_param("ss", $email, $password);
 
         if ($stmt->execute()) {
@@ -48,6 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conn->close();
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
