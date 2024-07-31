@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Call</title>
+    <link rel="stylesheet" href="generate.css" type="text/css">
+    <script src="script1.js" defer></script>
+</head>
+<body>
+    <div id="main-screen">
+        <header>
+            <div class="container">
+                <h1>Video Conference</h1>
+                <nav>
+                    <ul>
+                        <li><button onclick="showProfile()">Profile</button></li>
+                        <li><button onclick="logout()">Logout</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="left-column">
+                <section id="generate-call">
+                    <h2>Generate Call</h2>
+                    <form id="generate-form">
+                        <label for="meeting-link">Meeting Link:</label>
+                        <input type="text" id="meeting-link" readonly>
+
+                        <label for="meeting-id">Meeting ID:</label>
+                        <input type="text" id="meeting-id" readonly>
+
+                        <label for="meeting-password">Meeting Password:</label>
+                        <input type="text" id="meeting-password" readonly>
+
+                        <button type="button" class="btn" onclick="generateDetails()">Generate</button>
+                        <button type="button" class="btn secondary" id="create-button">Create</button>
+                    </form>
+                </section>
+            </div>
+            <div class="right-column">
+                <img src="dotnet.png" alt="Video Conference Image" class="conference-image">
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Redirect to video.html on "Create" button click
+        document.getElementById('create-button').addEventListener('click', function() {
+            window.location.href = 'video.html';
+        });
+    </script>
+</body>
+</html>

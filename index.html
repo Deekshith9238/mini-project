@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Conference Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="auth-screen">
+    <div class="auth-container">
+      <img id="showup" src="./images/homepage.png" alt="home">
+      <h1 class="welcome-title">Welcome to Video Conference</h1>
+      <div class="auth-buttons">
+        <button id="login" class="auth-btn" onclick="location.href='login.html';">Login</button>
+        <button id="submit" class="auth-btn" onclick="location.href='signup.php';">Sign Up</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main content here -->
+  <div id="main-screen" style="display: none;">
+    <header>
+      <div class="container">
+        <h1>Video Conference</h1>
+        <nav>
+          <ul>
+            <li><button onclick="showProfile()">Profile</button></li>
+            <li><button onclick="logout()">Logout</button></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Sections here -->
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

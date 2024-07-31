@@ -1,0 +1,47 @@
+.auth-screen {
+    display: flex;
+    justify-content: center; /* Center align content horizontally */
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Optional: background color */
+  }
+  
+  .auth-container {
+    text-align: center; /* Center align text and buttons */
+    position: relative;
+  }
+  
+  #showup {
+    max-width: 400%; /* Ensure the image does not exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    width: 600px; /* Adjust width as needed */
+    margin-bottom: 20px; /* Space below the image */
+  }
+  
+  .welcome-title {
+    font-size: 2rem;
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  .auth-buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center buttons horizontally */
+    gap: 10px; /* Space between buttons */
+  }
+    
+  .auth-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Primary button color */
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .auth-btn:hover {
+    background-color: #0056b3; /* Darker color on hover */
+  }
+  

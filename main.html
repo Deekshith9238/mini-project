@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="main.css" type="text/CSS">
+</head>
+<body>
+    <div id="main-screen">
+        <header>
+          <div class="container">
+            <h1>Video Conference</h1>
+            <nav>
+              <ul>
+                <li><button onclick="showProfile()">Profile</button></li>
+                <li><button onclick="logout()">Logout</button></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+    
+        <main class="container">
+          <div class="left-column">
+            <section id="dashboard" class="active">
+              <h2>Dashboard</h2>
+              <h3>Video Call</h3>
+              <button class="btn" onclick="location.href='generate.html'">Create Video Call</button>
+              <button class="btn" onclick="location.href='join.html'">Join Video Call</button>
+              
+              <h3>Voice Call</h3>
+              <button class="btn" onclick="location.href='generateaudio.html'">Create Voice Call</button>
+              <button class="btn" onclick="location.href='joinaudio.html'">Join Voice Call</button>
+            </section>
+          </div>
+          <div class="right-column">
+            <img src="undraw_remotely_2j6z.png" alt="Video Conference Image" class="conference-image">
+          </div>
+        </main>
+      </div>
+</body>
+</html>

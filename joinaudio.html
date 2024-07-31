@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Call</title>
+    <link rel="stylesheet" href="joinaudio.css" type="text/css">
+    <script src="script4.js" defer></script>
+</head>
+<body>
+    <div id="main-screen">
+        <header>
+            <div class="container">
+                <h1>Video Conference</h1>
+                <nav>
+                    <ul>
+                        <li><button id="profile-btn" onclick="showProfile()">Profile</button></li>
+                        <li><button id="logout-btn" onclick="logout()">Logout</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="left-column">
+                <section id="join-call">
+                    <h2>Join Call</h2>
+                    <form id="join-form">
+                        <label for="join-meeting-id">Meeting ID:</label>
+                        <input type="text" id="join-meeting-id" placeholder="Enter Meeting ID" required>
+
+                        <label for="join-meeting-password">Meeting Password:</label>
+                        <input type="password" id="join-meeting-password" placeholder="Enter Meeting Password" required>
+
+                        <button type="button" class="btn" id="join-button">Join</button>
+                    </form>
+                </section>
+            </div>
+            <div class="right-column">
+                <img src="dotnet.png" alt="Video Conference Image" class="conference-image">
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Redirect to call.html on "Join" button click
+        document.getElementById('join-button').addEventListener('click', function() {
+            window.location.href = 'audio.html';
+        });
+    </script>
+</body>
+</html>
